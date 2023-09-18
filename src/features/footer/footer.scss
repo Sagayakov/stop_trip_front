@@ -1,0 +1,72 @@
+footer {
+    min-width: 1440px;
+    margin: 0px auto 80px;
+    font-family: var(--font-lato);
+    font-weight: 600;
+    .footer-wrapper {
+        width: 1240px;
+        height: 102px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-rows: 49px 33px 20px;
+        .footer-top {
+            display: flex;
+            flex-direction: row;
+            .feedback {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 166px;
+                svg {
+                    margin-right: 30px;
+                    align-self: center;
+                }
+                form {
+                    input[type='text'] {
+                        width: 495px;
+                        height: 49px;
+                        border: 1px solid var(--grey-2);
+                        border-radius: var(--radii);
+                        padding: 1rem;
+                        margin: 0 1.5rem;
+                        outline: none;
+                        font-family: var(--font-inter);
+                        font-weight: 400;
+                    }
+                    input[type='submit'] {
+                        width: 122px;
+                        height: 43px;
+                        color: var(--white);
+                        font-weight: 600;
+                        padding: 12px 20px;
+                        border-radius: var(--radii);
+                        background-color: var(--main-green);
+                        border: none;
+                        cursor: pointer;
+                    }
+                    input[type='submit']:active {
+                        opacity: 0.75;
+                    }
+                }
+            }
+        }
+            .hr{
+                padding: 16.25px 0;
+                hr{
+                    height: 0.5px;
+                }
+            }
+            .footer-bot{
+                display: flex;
+                justify-content: space-between;
+                color: var(--main-black);
+                font-weight: 400;
+                font-family: var(--font-inter);
+                .contacts{
+                    width: 100px;
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+    }
+}

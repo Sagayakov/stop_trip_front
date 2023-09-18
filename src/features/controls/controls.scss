@@ -1,0 +1,100 @@
+.controls {
+    min-width: 1440px;
+    margin: 0px auto 80px;
+    .controls-wrapper {
+        width: 1240px;
+        margin: 0 auto;
+        display: flex;
+        font-family: var(--font-inter);
+        .button-all-categories {
+            width: 190px;
+            height: 3rem;
+            border-radius: 8px;
+            border: none;
+            background-color: var(--main-green);
+            font-weight: 600;
+            font-family: var(--font-sf);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            margin-right: 20px;
+            cursor: pointer;
+            svg {
+                margin-right: 8px;
+            }
+        }
+        .button-all-categories:active{
+            opacity: 0.75;
+        }
+        .input-wrapper {
+            width: 820px;
+            height: 3rem;
+            padding: 24px 12px;
+            border-radius: var(--radii);
+            border: 1px solid var(--grey-1);
+            display: flex;
+            align-items: center;
+            margin-right: 47px;
+            svg {
+                margin-right: 8px;
+            }
+            input {
+                outline: none;
+                border: none;
+                width: 350px;
+                height: 19px;
+            }
+        }
+        .select-wrapper {
+            width: 164px;
+            height: 3rem;
+            padding: 12px 16px;
+            border-radius: var(--radii);
+            border: 1px solid var(--main-blue);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            select {
+                width: 4.5rem;
+                font-weight: 500;
+                color: var(--main-blue);
+                border: none;
+            }
+            svg {
+                margin-right: 8px;
+            }
+        }
+        .modal{
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            .modal-content{
+                width: 280px;
+                height: 584px;
+                padding: 2.5rem 2.5rem 1rem;
+                border-radius: var(--radii);
+                border: none;
+                box-shadow: 0px 0px 20px 0px #00000012;
+                background-color: var(--white);
+                position: relative;
+                top: 226px;
+                left: 100px;
+                .modal-category{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 24px;
+                    cursor: pointer;
+                    span{
+                        font-family: var(--font-sf);
+                        font-weight: 500;
+                        color: var(--main-black);
+                    }
+                }
+            }
+        }
+    }
+}
