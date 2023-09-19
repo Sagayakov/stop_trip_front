@@ -2,8 +2,8 @@ import { useAppDispatch, useAppSelector } from '../../app/store/hooks'
 import { Modal } from '../../entities/header'
 import { LogoHeader } from '../../shared/ui/icons/icons-tools/LogoHeader'
 import { Plus } from '../../shared/ui/icons/icons-tools/Plus'
-import { toggleModalEnter } from '../model/modalAuth/reducers/toggleModal'
 import './header.scss'
+import { toggleModalEnter } from './model/modalAuth/reducers/toggleModal'
 
 export const Header = () => {
     const dispatch = useAppDispatch()

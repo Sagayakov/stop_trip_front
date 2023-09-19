@@ -1,12 +1,15 @@
-import { FormEnter } from ".."
-import { useAppDispatch, useAppSelector } from "../../../app/store/hooks"
-import { toggleModalEnter } from "../../../features/model/modalAuth/reducers/toggleModal"
-import { Close } from "../../../shared/ui/icons/icons-tools/Close"
+import { useState } from 'react'
+import { useAppDispatch, useAppSelector } from '../../../app/store/hooks'
+import { toggleModalEnter } from '../../../features/header/model/modalAuth/reducers/toggleModal'
+import { Close } from '../../../shared/ui/icons/icons-tools/Close'
+import { FormEnter, FormRegistration } from '../index'
+import './modal.scss'
 
 export const Modal = () => {
-    const toggle = useAppSelector(state => state.toggleModalEnter.toggle)
+    const [isRegister, setIsRegister] = useState(false)
+    const toggle = useAppSelector((state) => state.toggleModalEnter.toggle)
     const dispatch = useAppDispatch()
-
+    const handleEnterText = () => setIsRegister(!isRegister)
     return (
         <div
             className="modal"
@@ -15,10 +18,20 @@ export const Modal = () => {
             <div className="modal-wrapper" onClick={(event) => event.stopPropagation()}>
                 <Close onclick={() => dispatch(toggleModalEnter(false))} />
                 <div className="modal-header">
-                    <div className="enter">Вход</div>
-                    <div className="registration">Регистрация</div>
+                    <div
+                        onClick={handleEnterText}
+                        className={isRegister ? 'enter enter-active' : 'enter'}>
+                        Вход
+                    </div>
+                    <div
+                        onClick={handleEnterText}
+                        className={isRegister ? 'registration' : 'registration enter-active'}>
+                        Регистрация
+                    </div>
                 </div>
-                <FormEnter />
+                {isRegister
+                    ? <FormEnter />
+                    : <FormRegistration />}
             </div>
         </div>
     )

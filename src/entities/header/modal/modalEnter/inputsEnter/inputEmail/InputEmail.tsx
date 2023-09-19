@@ -1,24 +1,26 @@
 import { FormState, UseFormRegister } from 'react-hook-form'
-import { AuthData } from '../FormEnter'
+import { AuthData } from '../../FormEnter'
+import './inputEmail.scss'
 
 interface Props {
     formState: FormState<AuthData>
     register: UseFormRegister<AuthData>
 }
 
-export const InputEmail = ({formState, register}: Props) => {
+export const InputEmail = ({ formState, register }: Props) => {
     const { errors } = formState
+    
     return (
         <>
             <input
-                {...register('email', { required: true })}
+                {...register('email', {
+                    required: true,
+                    pattern: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                    minLength: 10
+                })}
                 placeholder="Email"
                 style={{
-                    width: '100%',
-                    height: '56px',
-                    border: '1px solid #DCDCDC',
-                    borderRadius: '8px',
-                    padding: '12px 24px',
+                    border: `1px solid ${errors?.email ? '#FF3F25' : '#DCDCDC'}`,
                 }}
             />
             <div style={{ height: '1.5rem' }}>

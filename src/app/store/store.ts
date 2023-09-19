@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { toggleModalSlice } from '../../features/model/modalAuth/reducers/toggleModal'
+import { toggleModalSlice } from '../../features/header/model/modalAuth/reducers/toggleModal'
 
 export const store = configureStore({
     reducer: {
