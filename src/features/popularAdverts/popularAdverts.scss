@@ -1,5 +1,5 @@
 .popular-adverts {
-    min-width: 1440px;
+    width: 1440px;
     margin: 0px auto 80px;
     .popular-adverts-wrapper {
         width: 1240px;
@@ -52,6 +52,98 @@
                         font-size: 14px;
                     }
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 1439px) {
+    .popular-adverts {
+        width: 100%;
+        margin: 0px auto 40px;
+        .popular-adverts-wrapper {
+            width: 85%;
+            margin: 0 auto 40px;
+            font-family: var(--font-inter);
+            & .pagination {
+                text-align: center;
+            }
+            h3 {
+                font-size: 2rem;
+                font-weight: 700;
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .popular-adverts {
+        width: 100%;
+        margin: 0 auto 20px;
+        .popular-adverts-wrapper {
+            width: 85%;
+            margin: 0 auto 20px;
+            font-family: var(--font-inter);
+            & .pagination {
+                text-align: center;
+            }
+            h3 {
+                font-size: 1.75rem;
+                font-weight: 700;
+                margin-bottom: 20px;
+            }
+            .adverts-list {
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
+                gap: 1rem;
+                margin: 20px 0px;
+                .adverts-cart {
+                    margin: 0 auto;
+                    cursor: pointer;
+                    font-size: 18px;
+                    font-weight: 700;
+                    width: 295px;
+                    height: 380px;
+                    background-color: var(--main-background);
+                    border-radius: 1rem;
+                    border: none;
+                    img {
+                        width: 295px;
+                        height: 239px;
+                        border-radius: 16px 16px 0 0;
+                        border: none;
+                    }
+                    .description {
+                        padding: 0.75rem 1rem 1.25rem;
+                        .price {
+                            display: flex;
+                            justify-content: space-between;
+                            margin-bottom: 14px;
+                            color: var(--main-blue);
+                            letter-spacing: 3px;
+                        }
+                        p {
+                            margin-bottom: 0.75rem;
+                        }
+                        span {
+                            color: var(--grey-3);
+                            font-weight: 400;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .popular-adverts {
+        .popular-adverts-wrapper {
+            h3 {
+                font-size: 1.5rem;
             }
         }
     }

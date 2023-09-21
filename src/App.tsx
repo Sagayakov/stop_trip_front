@@ -1,9 +1,7 @@
 import { Controls } from './features/controls'
-
-import { PopularAdverts } from './features/popularAdverts'
+import { PopularAdverts } from './features/popularAdverts/PopularAdverts'
 import { PopularCategories } from './features/popularCategories'
 import { Footer, Header } from './widgets'
-
 
 function App() {
     return (

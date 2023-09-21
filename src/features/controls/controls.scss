@@ -1,5 +1,5 @@
 .controls {
-    min-width: 1440px;
+    width: 1440px;
     margin: 0px auto 80px;
     .controls-wrapper {
         width: 1240px;
@@ -24,7 +24,7 @@
                 margin-right: 8px;
             }
         }
-        .button-all-categories:active{
+        .button-all-categories:active {
             opacity: 0.75;
         }
         .input-wrapper {
@@ -65,13 +65,13 @@
                 margin-right: 8px;
             }
         }
-        .modal{
+        .modal {
             width: 100vw;
             height: 100vh;
             position: absolute;
             top: 0;
             left: 0;
-            .modal-content{
+            .modal-content {
                 width: 280px;
                 height: 584px;
                 padding: 2.5rem 2.5rem 1rem;
@@ -82,13 +82,13 @@
                 position: relative;
                 top: 226px;
                 left: 100px;
-                .modal-category{
+                .modal-category {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                     margin-bottom: 24px;
                     cursor: pointer;
-                    span{
+                    span {
                         font-family: var(--font-sf);
                         font-weight: 500;
                         color: var(--main-black);
@@ -98,3 +98,75 @@
         }
     }
 }
+
+@media (min-width: 2560px) {
+    .controls {
+        .controls-wrapper {
+            .modal {
+                .modal-content {
+                    left: 660px;
+                }
+            }
+        }
+    }
+}
+@media (width: 1920px) {
+    .controls {
+        .controls-wrapper {
+            .modal {
+                .modal-content {
+                    left: 340px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1439px) {
+    .controls {
+        width: 100%;
+        margin: 0px auto 80px;
+        .controls-wrapper {
+            width: 85%;
+            margin: 0 auto 40px;
+            justify-content: space-between;
+            .button-all-categories {
+                width: 20%;
+                padding: 12px;
+                font-size: 14px;
+            }
+            .input-wrapper {
+                width: 50%;
+            }
+            .select-wrapper {
+                width: 20%;
+                padding: 0.5rem;
+                select {
+                    width: 80%;
+                }
+            }
+            .modal {
+                .modal-content {
+                    top: 226px;
+                    left: 7.5%;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1023px) {
+    .controls {
+        width: 100%;
+        margin: 0px auto 40px;
+        .controls-wrapper {
+            .modal {
+                .modal-content {
+                    top: 186px;
+                }
+            }
+        }
+    }
+}
+
+
+// @media (max-width: 767px){}
