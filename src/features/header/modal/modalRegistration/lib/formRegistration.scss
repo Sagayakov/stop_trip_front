@@ -5,26 +5,25 @@
 .user-agreement {
     font-family: var(--font-inter);
     font-weight: 400;
-    height: 1.5rem;
     margin-bottom: 1.5rem;
     display: flex;
     align-items: center;
+    font-size: 13px;
     label {
         cursor: pointer;
         display: flex;
         align-items: center;
-        font-size: 13px;
         input[type='checkbox'] {
-            margin-right: 1rem;
             width: 24px;
             height: 24px;
         }
-    }
-    .user-argeement-text{
-        cursor: pointer;
-        font-size: 13px;
-        color: var(--main-green);
-        margin-left: 3.5px;
+        span{
+            margin-left: 1rem;
+        }
+        .user-argeement-text{
+            color: var(--main-green);
+            text-decoration: none;
+        }
     }
 }
 .submit {
@@ -53,6 +52,14 @@
         .eye{
             top: 0;
             left: 0;
+        }
+    }
+}
+
+@media(min-width: 425px) and (max-width: 767px){
+    .password-div{
+        #eye{
+            top: 4px;
         }
     }
 }

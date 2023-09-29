@@ -19,6 +19,7 @@ header {
             color: white;
             display: flex;
             align-items: center;
+            font-family: var(--font-sf);
             cursor: pointer;
             .svg {
                 margin-right: 0.5rem;
@@ -83,8 +84,9 @@ header {
             width: 85%;
             margin: 0 auto 40px;
             justify-content: space-between;
-            .addAdvert {
-                margin-left: 25%;
+            .addAdvert,
+            .language-auth {
+                margin: 0;
             }
         }
     }
@@ -94,9 +96,94 @@ header {
     header {
         width: 100%;
         margin: 0px auto 40px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    header {
         .header-wrapper {
+            margin-bottom: 1.5rem;
             width: 85%;
             justify-content: space-between;
+            .addAdvert{
+                width: 30%;
+            }
+            .language-auth{
+                .auth-button{
+                    width: 85%;
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 601px) and (max-width: 767px) {
+    header {
+        .header-wrapper {
+            margin-bottom: 1.5rem;
+            width: 90%;
+            justify-content: space-between;
+            .addAdvert{
+                width: 40%;
+            }
+            .addAdvert + svg {
+                width: 40px;
+                height: 40px;
+                cursor: pointer;
+            }
+            .language-auth {
+                display: none;
+            }
+        }
+    }
+}
+@media (min-width: 476px) and (max-width: 600px) {
+    header {
+        .header-wrapper {
+            margin-bottom: 1.5rem;
+            width: 90%;
+            justify-content: space-between;
+            .addAdvert {
+                width: 40%;
+            }
+            .addAdvert + svg {
+                width: 35px;
+                height: 35px;
+                cursor: pointer;
+            }
+            .language-auth {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (min-width: 425px) and (max-width: 475px) {
+    header {
+        .header-wrapper {
+            margin-bottom: 1.5rem;
+            width: 396.5px;
+            height: 33px;
+            justify-content: space-between;
+            & + svg {
+                width: 100.5px;
+                height: 30px;
+            }
+            .addAdvert {
+                width: 192px;
+                height: 33px;
+                padding: 8px;
+                font-size: 14px;
+                margin: 0;
+            }
+            .addAdvert + svg {
+                cursor: pointer;
+            }
+
+            .language-auth {
+                display: none;
+            }
         }
     }
 }

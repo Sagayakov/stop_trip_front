@@ -12,6 +12,7 @@
             font-size: 2rem;
             font-weight: 700;
             margin-bottom: 40px;
+            font-family: var(--font-sf);
         }
         .adverts-list {
             width: 100%;
@@ -77,8 +78,8 @@
     }
 }
 
-@media (max-width: 767px) {
-    .popular-adverts {
+@media (min-width: 425px) and (max-width: 900px){
+        .popular-adverts {
         width: 100%;
         margin: 0 auto 20px;
         .popular-adverts-wrapper {
@@ -89,43 +90,44 @@
                 text-align: center;
             }
             h3 {
-                font-size: 1.75rem;
-                font-weight: 700;
-                margin-bottom: 20px;
+                font-size: 1.5rem;
+                font-weight: 600;
+                margin-bottom: 18px;
             }
             .adverts-list {
                 width: 100%;
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
                 gap: 1rem;
                 margin: 20px 0px;
+                justify-items: center;
                 .adverts-cart {
                     margin: 0 auto;
                     cursor: pointer;
                     font-size: 18px;
                     font-weight: 700;
-                    width: 295px;
-                    height: 380px;
+                    width: 190px;
+                    height: 264px;
                     background-color: var(--main-background);
                     border-radius: 1rem;
                     border: none;
                     img {
-                        width: 295px;
-                        height: 239px;
+                        width: 190px;
+                        height: 140px;
                         border-radius: 16px 16px 0 0;
                         border: none;
                     }
                     .description {
-                        padding: 0.75rem 1rem 1.25rem;
+                        padding: 0.75rem 1rem 10px;
                         .price {
                             display: flex;
                             justify-content: space-between;
-                            margin-bottom: 14px;
+                            margin-bottom: 12px;
                             color: var(--main-blue);
                             letter-spacing: 3px;
                         }
                         p {
-                            margin-bottom: 0.75rem;
+                            margin-bottom: 12px;
                         }
                         span {
                             color: var(--grey-3);
@@ -139,12 +141,10 @@
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 767px) {
     .popular-adverts {
         .popular-adverts-wrapper {
-            h3 {
-                font-size: 1.5rem;
-            }
+            width: 93.5%;
         }
     }
 }

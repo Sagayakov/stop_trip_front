@@ -8,3 +8,9 @@ input {
         background-color: var(--grey-1);
     }
 }
+
+@media(min-width: 425px) and (max-width: 767px){
+    input{
+        height: 40px;
+    }
+}

@@ -10,6 +10,7 @@
         border: none;
         padding: 60px 60px 80px;
         position: relative;
+        // background-color: var(--white);
         top: 72px;
         // left: 818px;
         left: calc(92.5% - 520px);
@@ -67,3 +68,14 @@
     }
 }
 
+@media(min-width: 425px) and (max-width: 767px){
+    .modal{
+        background-color: rgba($color: #000000, $alpha: 0.75);
+        .modal-wrapper{
+            width: 90%;
+            left: calc((100vw - 90%) / 2);
+            top: 40px;
+            padding: 60px 20px 40px;
+        }
+    }
+}

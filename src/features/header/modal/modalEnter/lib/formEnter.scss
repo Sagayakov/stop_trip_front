@@ -50,12 +50,12 @@
             border: none;
             cursor: pointer;
             position: relative;
-            #google-icon{
+            #google-icon {
                 position: absolute;
                 top: 8px;
                 left: 8px;
-            };
-            #vk-icon{
+            }
+            #vk-icon {
                 position: absolute;
                 top: 6px;
                 left: 6px;
@@ -74,6 +74,16 @@
             .eye {
                 top: 0;
                 left: 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 425px) and (max-width: 767px) {
+    .form-enter {
+        .password-div {
+            #eye {
+                top: 4px;
             }
         }
     }

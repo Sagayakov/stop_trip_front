@@ -8,7 +8,7 @@ function App() {
         <>
             <Header />
             <Controls />
-            <PopularCategories />
+            {/* <PopularCategories /> */}
             <PopularAdverts />
             <Footer />
         </>
