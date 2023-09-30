@@ -168,5 +168,109 @@
     }
 }
 
+@media (min-width: 475px) and (max-width: 767px) {
+    .controls {
+        width: 100vw;
+        .controls-wrapper {
+            width: 85%;
+            margin: 0 auto 40px;
+            display: grid;
+            grid-template-areas:
+                'input input'
+                'select button';
 
-// @media (max-width: 767px){}
+            .button-all-categories {
+                grid-area: button;
+                margin-left: auto;
+                margin-top: 12px;
+                width: 70%;
+                height: 24px;
+                border: none;
+                background: none;
+                color: var(--main-green);
+                svg {
+                    display: none;
+                }
+            }
+            .input-wrapper {
+                grid-area: input;
+                width: 93%;
+                input {
+                    background: none;
+                }
+            }
+            .input-wrapper:focus {
+                border: 1px solid var(--main-blue);
+            }
+            .select-wrapper {
+                border: none;
+                width: 85%;
+                p {
+                    width: 125px;
+                }
+            }
+            .modal {
+                background: none;
+                .modal-content {
+                    width: 320px;
+                    top: 220px;
+                    left: calc(85% - 263px);
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 425px) and (max-width: 474px) {
+    .controls {
+        width: 100vw;
+        .controls-wrapper {
+            width: 410px;
+            margin: 0 auto 40px;
+            display: grid;
+            grid-template-areas:
+                'input input'
+                'select button';
+
+            .button-all-categories {
+                grid-area: button;
+                margin-left: auto;
+                margin-top: 12px;
+                width: 82%;
+                height: 24px;
+                border: none;
+                background: none;
+                color: var(--main-green);
+                svg {
+                    display: none;
+                }
+            }
+            .input-wrapper {
+                grid-area: input;
+                width: 400px;
+                input {
+                    background: none;
+                }
+            }
+            .input-wrapper:focus {
+                border: 1px solid var(--main-blue);
+            }
+            .select-wrapper {
+                border: none;
+                width: 70%;
+                grid-area: select;
+                p {
+                    width: 125px;
+                }
+            }
+            .modal {
+                background: none;
+                .modal-content {
+                    width: 320px;
+                    top: 170px;
+                    left: 92px;
+                }
+            }
+        }
+    }
+}

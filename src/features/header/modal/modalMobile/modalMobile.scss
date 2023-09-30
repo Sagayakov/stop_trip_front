@@ -1,0 +1,22 @@
+.modal-mobile{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    .modal-mobile-content{
+        position: absolute;
+        top: 360px;
+        left: calc(85% - 240px);
+        box-shadow: 0px 0px 20px 0px #00000012;
+        width: 300px;
+        height: 372px;
+        padding: 40px;
+        border-radius: 8px;
+        background-color: var(--main-background);
+        font-weight: 500;
+        font-family: var(--font-sf);
+        p{
+            margin-top: 48px;
+            color: #FF3F25;
+        }
+    }
+}
