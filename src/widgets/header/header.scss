@@ -163,12 +163,11 @@ header {
     header {
         .header-wrapper {
             margin-bottom: 1.5rem;
-            width: 396.5px;
+            width: 410px;
             height: 33px;
             justify-content: space-between;
-            & + svg {
-                width: 100.5px;
-                height: 30px;
+            #logo {
+                width: 120px;
             }
             .addAdvert {
                 width: 192px;

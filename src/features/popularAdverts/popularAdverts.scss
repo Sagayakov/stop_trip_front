@@ -66,6 +66,9 @@
             width: 85%;
             margin: 0 auto 40px;
             font-family: var(--font-inter);
+            .adverts-list{
+                justify-items: center;
+            }
             & .pagination {
                 text-align: center;
             }
@@ -99,7 +102,7 @@
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
                 gap: 1rem;
-                margin: 20px 0px;
+                margin: 20px auto;
                 justify-items: center;
                 .adverts-cart {
                     margin: 0 auto;
