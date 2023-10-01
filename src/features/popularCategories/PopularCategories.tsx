@@ -39,7 +39,7 @@ export const PopularCategories = () => {
                         </span>
                     </div>
                     <div className="docs">
-                        <Docs />
+                        <Docs color='"#1F6FDE"' />
                         <p>Документы</p>
                         <span>
                             115 предложений <ArrowRight color="#1F6FDE" />
