@@ -9,7 +9,7 @@ export const ModalWindow = ({showModal, setShowModal}: Props) => {
     return (
         <div
             className="modal"
-            style={{ display: `${showModal ? 'block' : 'none'}` }}
+            style={{ display: `${showModal ? 'flex' : 'none'}` }}
             onClick={() => setShowModal(false)}>
             <div className="modal-content" onClick={(event) => event.stopPropagation()}>
                 <div className="modal-category">

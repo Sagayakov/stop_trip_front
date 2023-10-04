@@ -1,6 +1,7 @@
 import { FormState, UseFormRegister } from 'react-hook-form'
 import { Eye } from '../../../../../../shared/ui/icons/icons-tools/Eye'
 import { AuthRegistration } from '../../lib/RegistrationTypes'
+import { useRef } from 'react'
 
 interface Props {
     formState: FormState<AuthRegistration>
@@ -11,7 +12,12 @@ interface Props {
 
 export const InputPassword = ({ formState, register, showPassword, setShowPassword }: Props) => {
     const { errors } = formState
-    const handleShowPass = () => setShowPassword(!showPassword)
+    const inputRef = useRef<HTMLInputElement | null>(null)
+    const handleShowPass = () => {
+        setShowPassword(!showPassword)
+        inputRef.current?.focus()
+    }
+
     return (
         <>
             <div className="password-div">
@@ -25,6 +31,8 @@ export const InputPassword = ({ formState, register, showPassword, setShowPasswo
                     style={{
                         border: `1px solid ${errors?.password ? '#FF3F25' : '#DCDCDC'}`,
                     }}
+                    ref={inputRef}
+                    onBlur={() => setShowPassword(false)}
                 />
                 <div id="eye" onClick={handleShowPass}>
                     <Eye />

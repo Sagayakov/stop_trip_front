@@ -35,20 +35,20 @@ export const Footer = () => {
                         <div className="contacts">
                             <p>admin@gmail.com</p>
                             <div className="contacts-logo">
-                                <Telegram />
-                                <WhatsApp />
-                                <Facebook />
+                                <Telegram color="#3968aa" />
+                                <WhatsApp color="#10bf3e" />
+                                <Facebook color="#5e83d8" />
                             </div>
                         </div>
                     </div>
                 ) : (
                     <div className="footer-bot">
                         <div className="contacts">
-                            <Telegram />
-                            <WhatsApp />
-                            <Facebook />
+                            <Telegram color="#3968aa" />
+                            <WhatsApp color="#10bf3e" />
+                            <Facebook color="#5e83d8" />
                         </div>
-                            admin@gmail.com
+                        admin@gmail.com
                     </div>
                 )}
             </div>

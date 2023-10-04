@@ -1,10 +1,11 @@
 interface Props {
   style?: Style
+  color?: string
 }
 interface Style{
   cursor: string
 }
-export const Telegram = ({style}: Props) => {
+export const Telegram = ({style, color}: Props) => {
   return (
     <svg
     style={style}
@@ -13,7 +14,7 @@ export const Telegram = ({style}: Props) => {
       viewBox="0 0 21 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg">
-      <rect x="0.5" width="20" height="20" rx="10" fill="#1C1C1E" />
+      <rect x="0.5" width="20" height="20" rx="10" fill={color} />
       <path
         fillRule="evenodd"
         clipRule="evenodd"
