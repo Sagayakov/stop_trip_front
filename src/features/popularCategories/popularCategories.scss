@@ -1,223 +1,189 @@
 .popular-categories {
-    width: 1440px;
-    margin: 0px auto 80px;
-    .popular-categories-wrapper {
-        width: 1240px;
-        margin: 0 auto;
-        font-family: var(--font-sf);
-        h3 {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 40px;
-        }
-        .categories-list {
-            width: 100%;
-            height: 310px;
-            display: grid;
-            grid-template-areas:
-                'realty realty realty transport transport transport food food docs docs currency currency'
-                'excursion excursion job job taxi taxi buysell buysell buysell service service service';
-            gap: 20px;
-            & div {
-                height: 145px;
-                min-width: 190px;
-                max-width: 295px;
-                border: 1px solid var(--main-blue);
-                border-radius: 1rem;
-                padding: 1.5rem;
-                cursor: pointer;
-                p {
-                    font-weight: 600;
-                    font-size: 18px;
-                }
-                span {
-                    display: flex;
-                    align-items: center;
-                    font-weight: 400;
-                    font-size: 14px;
-                    color: var(--main-blue);
-                }
-            }
-            .realty {
-                grid-area: realty;
-            }
-            .transport {
-                grid-area: transport;
-            }
-            .food {
-                grid-area: food;
-            }
-            .docs {
-                grid-area: docs;
-            }
-            .currency {
-                grid-area: currency;
-            }
-            .excursion {
-                grid-area: excursion;
-            }
-            .job {
-                grid-area: job;
-            }
-            .taxi {
-                grid-area: taxi;
-            }
-            .buysell {
-                grid-area: buysell;
-            }
-            .service {
-                grid-area: service;
-            }
-        }
+  width: 1440px;
+  margin: 0px auto 80px;
+  .popular-categories-wrapper {
+    width: 1240px;
+    margin: 0 auto;
+    font-family: var(--font-sf);
+    h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 40px;
     }
+    .categories-list {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      & div {
+        flex-grow: 1;
+        height: 145px;
+        min-width: 190px;
+        max-width: 295px;
+        border: 1px solid var(--main-blue);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        cursor: pointer;
+        p {
+          font-weight: 600;
+          font-size: 18px;
+        }
+        span {
+          display: flex;
+          align-items: center;
+          font-weight: 400;
+          font-size: 14px;
+          color: var(--main-blue);
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1439px) {
-    .popular-categories {
-        width: 100%;
-        margin: 0px auto 40px;
-        .popular-categories-wrapper {
-            width: 85%;
-            margin: 0 auto 40px;
-            font-family: var(--font-inter);
-            h3 {
-                font-size: 1.5rem;
-                font-weight: 700;
-                margin-bottom: 10px;
-                font-family: var(--font-sf);
-            }
-            .categories-list {
-                display: flex;
-                overflow-x: scroll;
-                &::-webkit-scrollbar {
-                    width: 0px;
-                }
-                width: 100%;
-                height: 105px;
-                gap: 8px;
-                & div {
-                    padding: 8px 12px;
-                    height: auto;
-
-                    & svg {
-                        width: 30px;
-                        height: 30px;
-                    }
-                    p {
-                        font-weight: 500;
-                        font-size: 14px;
-                    }
-                    span {
-                        display: none;
-                    }
-                }
-                .realty {
-                    width: 126px;
-                    min-width: 125px;
-                }
-                .transport {
-                    min-width: 106px;
-                }
-                .food {
-                    min-width: 100px;
-                }
-                .docs {
-                    min-width: 106px;
-                }
-                .currency {
-                    min-width: 100px;
-                }
-                .excursion {
-                    min-width: 106px;
-                }
-                .job {
-                    min-width: 84px;
-                }
-                .taxi {
-                    min-width: 84px;
-                }
-                .buysell {
-                    min-width: 100px;
-                }
-                .service {
-                    min-width: 84px;
-                }
-            }
+  .popular-categories {
+    width: 100%;
+    margin: 0px auto 40px;
+    .popular-categories-wrapper {
+      width: 85%;
+      margin: 0 auto 40px;
+      font-family: var(--font-inter);
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        font-family: var(--font-sf);
+      }
+      .categories-list {
+        overflow-x: scroll;
+        &::-webkit-scrollbar {
+          width: 0px;
         }
+        width: 100%;
+        gap: 8px;
+        & div {
+          padding: 8px 12px;
+          height: auto;
+
+          & svg {
+            width: 30px;
+            height: 30px;
+          }
+          p {
+            font-weight: 500;
+            font-size: 14px;
+          }
+          span {
+            display: none;
+          }
+        }
+        .realty {
+          width: 126px;
+          min-width: 125px;
+        }
+        .transport {
+          min-width: 106px;
+        }
+        .food {
+          min-width: 100px;
+        }
+        .docs {
+          min-width: 106px;
+        }
+        .currency {
+          min-width: 100px;
+        }
+        .excursion {
+          min-width: 106px;
+        }
+        .job {
+          min-width: 84px;
+        }
+        .taxi {
+          min-width: 84px;
+        }
+        .buysell {
+          min-width: 100px;
+        }
+        .service {
+          min-width: 84px;
+        }
+      }
     }
+  }
 }
 
 @media (min-width: 425px) and (max-width: 767px) {
-    .popular-categories {
-        width: 100%;
-        margin: 0px auto 40px;
-        .popular-categories-wrapper {
-            width: 93.5%;
-            margin: 0 auto 40px;
-            font-family: var(--font-inter);
-            h3 {
-                font-size: 1.5rem;
-                font-weight: 700;
-                margin-bottom: 10px;
-                font-family: var(--font-sf);
-            }
-            .categories-list {
-                display: flex;
-                overflow-x: scroll;
-                &::-webkit-scrollbar {
-                    width: 0px;
-                }
-                width: 100%;
-                height: 105px;
-                gap: 8px;
-                & div {
-                    padding: 8px 12px;
-                    height: auto;
-
-                    & svg {
-                        width: 30px;
-                        height: 30px;
-                    }
-                    p {
-                        font-weight: 500;
-                        font-size: 14px;
-                    }
-                    span {
-                        display: none;
-                    }
-                }
-                .realty {
-                    width: 126px;
-                    min-width: 125px;
-                }
-                .transport {
-                    min-width: 106px;
-                }
-                .food {
-                    min-width: 100px;
-                }
-                .docs {
-                    min-width: 106px;
-                }
-                .currency {
-                    min-width: 100px;
-                }
-                .excursion {
-                    min-width: 106px;
-                }
-                .job {
-                    min-width: 84px;
-                }
-                .taxi {
-                    min-width: 84px;
-                }
-                .buysell {
-                    min-width: 100px;
-                }
-                .service {
-                    min-width: 84px;
-                }
-            }
+  .popular-categories {
+    width: 100%;
+    margin: 0px auto 40px;
+    .popular-categories-wrapper {
+      width: 93.5%;
+      margin: 0 auto 40px;
+      font-family: var(--font-inter);
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        font-family: var(--font-sf);
+      }
+      .categories-list {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        &::-webkit-scrollbar {
+          width: 0px;
         }
+        width: 100%;
+        height: 105px;
+        gap: 8px;
+        & div {
+          padding: 8px 12px;
+          height: auto;
+
+          & svg {
+            width: 30px;
+            height: 30px;
+          }
+          p {
+            font-weight: 500;
+            font-size: 14px;
+          }
+          span {
+            display: none;
+          }
+        }
+        .realty {
+          width: 126px;
+          min-width: 125px;
+        }
+        .transport {
+          min-width: 106px;
+        }
+        .food {
+          min-width: 100px;
+        }
+        .docs {
+          min-width: 106px;
+        }
+        .currency {
+          min-width: 100px;
+        }
+        .excursion {
+          min-width: 106px;
+        }
+        .job {
+          min-width: 84px;
+        }
+        .taxi {
+          min-width: 84px;
+        }
+        .buysell {
+          min-width: 100px;
+        }
+        .service {
+          min-width: 84px;
+        }
+      }
     }
+  }
 }
