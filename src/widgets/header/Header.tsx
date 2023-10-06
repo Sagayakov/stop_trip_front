@@ -36,9 +36,9 @@ export const Header = () => {
         </NavLink>
         <button className="addAdvert">
           <Plus color="white" />
-          Разместить объявление
+          {width >= 425 && "Разместить объявление"}
         </button>
-        {width >= 425 && width <= 767 ? (
+        {width <= 767 ? (
           <Person handleClick={() => setShowUserMenu(!showUserMenu)} /> //когда будет регистрация, переделать на редьюсер
         ) : (
           <div className="language-auth">
