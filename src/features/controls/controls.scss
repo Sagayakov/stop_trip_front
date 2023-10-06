@@ -1,6 +1,7 @@
 .controls {
   width: 1440px;
   margin: 0px auto 80px;
+  padding-top: 176px;
   .controls-wrapper {
     width: 1240px;
     margin: 0 auto;
@@ -118,6 +119,7 @@
   .controls {
     width: 100%;
     margin: 0px auto 40px;
+    padding-top: 136px;
     .controls-wrapper {
       width: 85%;
       margin: 0 auto 40px;
@@ -216,6 +218,7 @@
 @media (min-width: 425px) and (max-width: 474px) {
   .controls {
     width: 100vw;
+    padding-top: 86px;
     .controls-wrapper {
       width: 410px;
       margin: 0 auto 40px;

@@ -13,6 +13,7 @@ export const Header = () => {
   const dispatch = useAppDispatch();
   const toggle = useAppSelector((state) => state.toggleModalEnter.toggle);
   const [width, setWidth] = useState<number>(window.innerWidth);
+  const [fixedHeader, setFixedHeader] = useState(false)
 
   const [showUserMenu, setShowUserMenu] = useState(false); //потом переделать на редьюсер
 
@@ -23,13 +24,18 @@ export const Header = () => {
       setWidth(window.innerWidth);
     };
     window.addEventListener("resize", handleResize);
+
+    const handleScroll = () => setFixedHeader(true)
+    window.addEventListener('scroll', handleScroll)
+
     return () => {
       window.removeEventListener("resize", handleResize);
+      // window.removeEventListener('scroll', handleScroll)
     };
   }, [window.innerWidth]);
 
   return (
-    <header>
+    <header className={fixedHeader ? 'fixed-header' : ''}>
       <div className="header-wrapper">
         <NavLink to="/">
           <LogoHeader />

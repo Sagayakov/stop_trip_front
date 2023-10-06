@@ -2,6 +2,21 @@ header {
     width: 100%;
     margin: 0px auto 80px;
     box-shadow: 0px 6px 8px 0px #00000014;
+    position: absolute;
+    z-index: 100;
+    background-color: var(--main-background);
+    // transition: all 0.3s ease;
+}
+header.fixed-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0px auto 40px;
+    box-shadow: 0px 6px 8px 0px #00000014;
+    background-color: var(--main-background);
+}
     .header-wrapper {
         width: 1240px;
         padding: 24px 0;
@@ -74,42 +89,42 @@ header {
             }
         }
     }
-}
+
 
 @media (max-width: 1439px) {
     header {
         width: 100%;
-        margin: 0px auto 40px;
+        margin: 0px auto;
+    }
         .header-wrapper {
             width: 85%;
-            margin: 0 auto 40px;
+            margin: 0 auto;
             justify-content: space-between;
             .addAdvert,
             .language-auth {
                 margin: 0;
             }
         }
-    }
+
 }
 
 @media (max-width: 1023px) {
     header {
         width: 100%;
-        margin: 0px auto 40px;
+        margin: 0px auto;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
     header {
         .header-wrapper {
-            margin-bottom: 1.5rem;
             width: 85%;
             justify-content: space-between;
-            .addAdvert{
+            .addAdvert {
                 width: 30%;
             }
-            .language-auth{
-                .auth-button{
+            .language-auth {
+                .auth-button {
                     width: 85%;
                     padding: 0 10px;
                 }
@@ -121,10 +136,9 @@ header {
 @media (min-width: 601px) and (max-width: 767px) {
     header {
         .header-wrapper {
-            margin-bottom: 1.5rem;
             width: 90%;
             justify-content: space-between;
-            .addAdvert{
+            .addAdvert {
                 width: 40%;
             }
             .addAdvert + svg {
@@ -141,7 +155,6 @@ header {
 @media (min-width: 476px) and (max-width: 600px) {
     header {
         .header-wrapper {
-            margin-bottom: 1.5rem;
             width: 90%;
             justify-content: space-between;
             .addAdvert {
@@ -157,9 +170,15 @@ header {
 }
 
 @media (min-width: 425px) and (max-width: 475px) {
-    header {
+    header.fixed-header{
+        width: 425px;
+        margin: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 48px;
+    }
         .header-wrapper {
-            margin-bottom: 1.5rem;
             width: 410px;
             height: 33px;
             justify-content: space-between;
@@ -181,5 +200,5 @@ header {
                 display: none;
             }
         }
-    }
+
 }
