@@ -1,3 +1,13 @@
+header.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0px auto 40px;
+    box-shadow: 0px 6px 8px 0px #00000014;
+    background-color: var(--main-background);
+}
 header {
     width: 100%;
     margin: 0px auto 80px;
@@ -6,16 +16,7 @@ header {
     z-index: 100;
     background-color: var(--main-background);
     // transition: all 0.3s ease;
-    header.fixed-header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        margin: 0px auto 40px;
-        box-shadow: 0px 6px 8px 0px #00000014;
-        background-color: var(--main-background);
-    }
+
     .header-wrapper {
         width: 1240px;
         padding: 24px 0;
@@ -83,30 +84,7 @@ header {
                 border-radius: var(--radii);
                 font-weight: 600;
                 font-family: var(--font-inter);
-                /* =======
-    width: 100%;
-    margin: 0px auto 80px;
-    box-shadow: 0px 6px 8px 0px #00000014;
-    position: absolute;
-    z-index: 100;
-    background-color: var(--main-background);
-    // transition: all 0.3s ease;
-}
-header.fixed-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    margin: 0px auto 40px;
-    box-shadow: 0px 6px 8px 0px #00000014;
-    background-color: var(--main-background);
-}
-    .header-wrapper {
-        width: 1240px;
-        padding: 24px 0;
-        margin: 0 auto;
->>>>>>> 2186acbe4cce9c6b95963a9450ddbee59ccb50c6 */
+
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -203,6 +181,7 @@ header.fixed-header{
 
 @media (min-width: 425px) and (max-width: 475px) {
     header {
+        height: 50px;
         .header-wrapper {
             margin-bottom: 1.5rem;
             width: 410px;
@@ -230,24 +209,24 @@ header.fixed-header{
 }
 
 @media (max-width: 424px) {
+    header.fixed-header {
+        width: 100%;
+        margin: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 48px;
+    }
     header {
-        header.fixed-header {
-            width: 425px;
-            margin: 0;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 48px;
-        }
         .header-wrapper {
-            width: 410px;
+            width: 93.5%;
             height: 33px;
             justify-content: space-between;
             #logo {
                 width: 110px;
             }
             .addAdvert {
-                width: 192px;
+                width: auto;
                 height: 33px;
                 padding: 8px;
                 font-size: 14px;

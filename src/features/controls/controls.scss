@@ -177,7 +177,7 @@
     }
 }
 
-@media (min-width: 425px) and (max-width: 475px) {
+@media (max-width: 475px) {
     .controls {
         width: 100vw;
         padding-top: 86px;
@@ -205,35 +205,31 @@
             .input-wrapper {
                 grid-area: input;
                 width: 100%;
-                padding: 24px 0;
+                padding: 0;
                 input {
                     background: none;
+                    padding-left: 40px;
+                }
+                svg {
+                    left: 10px;
                 }
             }
+
             .input-wrapper:focus {
                 border: 1px solid var(--main-blue);
             }
             .select-wrapper {
                 justify-content: flex-start;
                 border: none;
-                width: 50%;
+                width: 55%;
                 padding: 8px 0;
                 p {
-                    width: 125px;
+                    width: 145px;
                 }
                 select {
                     width: 120px;
                 }
             }
-        }
-    }
-}
-
-@media (max-width: 424px) {
-    .controls {
-        width: 100vw;
-        .controls-wrapper {
-            width: 300px;
         }
     }
 }
