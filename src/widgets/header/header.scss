@@ -1,13 +1,30 @@
+header.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0px auto 40px;
+    box-shadow: 0px 6px 8px 0px #00000014;
+    background-color: var(--main-background);
+}
 header {
     width: 100%;
     margin: 0px auto 80px;
     box-shadow: 0px 6px 8px 0px #00000014;
+    position: absolute;
+    z-index: 100;
+    background-color: var(--main-background);
+    // transition: all 0.3s ease;
+
     .header-wrapper {
         width: 1240px;
         padding: 24px 0;
         margin: 0 auto;
         display: flex;
         align-items: center;
+        justify-content: center;
+        cursor: pointer;
         .addAdvert {
             width: 262px;
             height: 3rem;
@@ -45,7 +62,7 @@ header {
                     height: 36px;
                     color: var(--main-blue);
                     border-radius: 8px 0px 0px 8px;
-                    background-color: var(--main-background);
+                    background-color: #f0f0f0;
                     padding: 10px 12px;
                     cursor: pointer;
                 }
@@ -67,6 +84,7 @@ header {
                 border-radius: var(--radii);
                 font-weight: 600;
                 font-family: var(--font-inter);
+
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -79,10 +97,10 @@ header {
 @media (max-width: 1439px) {
     header {
         width: 100%;
-        margin: 0px auto 40px;
+        margin: 0px auto;
         .header-wrapper {
             width: 85%;
-            margin: 0 auto 40px;
+            margin: 0 auto;
             justify-content: space-between;
             .addAdvert,
             .language-auth {
@@ -95,21 +113,27 @@ header {
 @media (max-width: 1023px) {
     header {
         width: 100%;
-        margin: 0px auto 40px;
+        margin: 0px auto;
+        .header-wrapper {
+            .addAdvert {
+                width: 192px;
+                padding: 8px;
+                font-size: 14px;
+            }
+        }
     }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
     header {
         .header-wrapper {
-            margin-bottom: 1.5rem;
             width: 85%;
             justify-content: space-between;
-            .addAdvert{
+            .addAdvert {
                 width: 30%;
             }
-            .language-auth{
-                .auth-button{
+            .language-auth {
+                .auth-button {
                     width: 85%;
                     padding: 0 10px;
                 }
@@ -121,10 +145,9 @@ header {
 @media (min-width: 601px) and (max-width: 767px) {
     header {
         .header-wrapper {
-            margin-bottom: 1.5rem;
             width: 90%;
             justify-content: space-between;
-            .addAdvert{
+            .addAdvert {
                 width: 40%;
             }
             .addAdvert + svg {
@@ -132,20 +155,20 @@ header {
                 height: 40px;
                 cursor: pointer;
             }
-            // .language-auth {
-            //     display: none;
-            // }
         }
     }
 }
 @media (min-width: 476px) and (max-width: 600px) {
     header {
         .header-wrapper {
-            margin-bottom: 1.5rem;
             width: 90%;
             justify-content: space-between;
             .addAdvert {
                 width: 40%;
+            }
+            .addAdvert {
+                width: auto;
+                text-align: center;
             }
             .addAdvert + svg {
                 width: 35px;
@@ -158,9 +181,10 @@ header {
 
 @media (min-width: 425px) and (max-width: 475px) {
     header {
+        height: 50px;
         .header-wrapper {
             margin-bottom: 1.5rem;
-            width: 410px;
+            width: 400px; //410
             height: 33px;
             justify-content: space-between;
             #logo {
@@ -177,6 +201,40 @@ header {
                 cursor: pointer;
             }
 
+            .language-auth {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 424px) {
+    header.fixed-header {
+        width: 100%;
+        margin: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 48px;
+    }
+    header {
+        .header-wrapper {
+            width: 93.5%;
+            height: 33px;
+            justify-content: space-between;
+            #logo {
+                width: 110px;
+            }
+            .addAdvert {
+                width: auto;
+                height: 33px;
+                padding: 8px;
+                font-size: 14px;
+                margin: 0;
+            }
+            .addAdvert + svg {
+                cursor: pointer;
+            }
             .language-auth {
                 display: none;
             }

@@ -1,6 +1,7 @@
 .controls {
     width: 1440px;
     margin: 0px auto 80px;
+    padding-top: 176px;
     .controls-wrapper {
         width: 1240px;
         margin: 0 auto;
@@ -32,31 +33,41 @@
             height: 3rem;
             padding: 24px 12px;
             border-radius: var(--radii);
-            border: 1px solid var(--grey-1);
+            // border: 1px solid var(--grey-1);
             display: flex;
             align-items: center;
             margin-right: 47px;
+            position: relative;
             svg {
                 margin-right: 8px;
+                position: absolute;
+                left: 25px;
             }
             input {
                 outline: none;
                 border: none;
-                width: 350px;
-                height: 19px;
+                width: 100%;
+                height: 50px;
+                border: 1px solid var(--grey-1);
+                padding: 16px 16px 16px 50px;
+                // width: 350px; было
+                // height: 19px; // было
+                &:focus {
+                    border: 1px solid var(--main-blue);
+                }
             }
         }
         .select-wrapper {
             width: 164px;
             height: 3rem;
-            padding: 12px 16px;
+            padding: 12px, 16px, 12px, 16px;
             border-radius: var(--radii);
             border: 1px solid var(--main-blue);
             display: flex;
             justify-content: center;
             align-items: center;
             select {
-                width: 4.5rem;
+                width: 60%;
                 font-weight: 500;
                 color: var(--main-blue);
                 border: none;
@@ -65,73 +76,22 @@
                 margin-right: 8px;
             }
         }
-        .modal {
-            width: 100vw;
-            height: 100vh;
-            position: absolute;
-            top: 0;
-            left: 0;
-            .modal-content {
-                width: 280px;
-                height: 584px;
-                padding: 2.5rem 2.5rem 1rem;
-                border-radius: var(--radii);
-                border: none;
-                box-shadow: 0px 0px 20px 0px #00000012;
-                background-color: var(--white);
-                position: relative;
-                top: 226px;
-                left: 100px;
-                .modal-category {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    margin-bottom: 24px;
-                    cursor: pointer;
-                    span {
-                        font-family: var(--font-sf);
-                        font-weight: 500;
-                        color: var(--main-black);
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media (min-width: 2560px) {
-    .controls {
-        .controls-wrapper {
-            .modal {
-                .modal-content {
-                    left: 660px;
-                }
-            }
-        }
-    }
-}
-@media (width: 1920px) {
-    .controls {
-        .controls-wrapper {
-            .modal {
-                .modal-content {
-                    left: 340px;
-                }
-            }
-        }
     }
 }
 
 @media (max-width: 1439px) {
     .controls {
         width: 100%;
+
         margin: 0px auto 40px;
+        padding-top: 136px;
+
         .controls-wrapper {
             width: 85%;
             margin: 0 auto 40px;
             justify-content: space-between;
             .button-all-categories {
-                width: 20%;
+                width: 18%;
                 padding: 12px;
                 font-size: 14px;
             }
@@ -145,23 +105,26 @@
                     width: 80%;
                 }
             }
-            .modal {
-                .modal-content {
-                    top: 226px;
-                    left: 7.5%;
-                }
-            }
         }
     }
 }
 @media (max-width: 1023px) {
     .controls {
         width: 100%;
-        margin: 0px auto 40px;
+        margin: 0 0 40px;
         .controls-wrapper {
-            .modal {
-                .modal-content {
-                    top: 186px;
+            .button-all-categories {
+                width: 10rem;
+                padding: 8px;
+                margin-right: 0;
+            }
+            .input-wrapper {
+                margin-right: 0;
+            }
+            .select-wrapper {
+                width: 22%;
+                svg {
+                    margin: 0;
                 }
             }
         }
@@ -170,9 +133,10 @@
 
 @media (min-width: 475px) and (max-width: 767px) {
     .controls {
-        width: 100vw;
+        width: 100%;
+
         .controls-wrapper {
-            width: 85%;
+            width: 93%;
             margin: 0 auto 40px;
             display: grid;
             grid-template-areas:
@@ -183,7 +147,7 @@
                 grid-area: button;
                 margin-left: auto;
                 margin-top: 12px;
-                width: 70%;
+                width: 7.5rem;
                 height: 24px;
                 border: none;
                 background: none;
@@ -194,9 +158,14 @@
             }
             .input-wrapper {
                 grid-area: input;
-                width: 93%;
+                width: 100%;
+                padding: 0;
                 input {
                     background: none;
+                    padding-left: 40px;
+                }
+                svg {
+                    left: 10px;
                 }
             }
             .input-wrapper:focus {
@@ -205,32 +174,26 @@
             .select-wrapper {
                 border: none;
                 width: 85%;
+                padding-left: 0;
                 p {
                     width: 125px;
-                }
-            }
-            .modal {
-                background: none;
-                .modal-content {
-                    width: 320px;
-                    top: 220px;
-                    left: calc(85% - 263px);
                 }
             }
         }
     }
 }
 
-@media (min-width: 425px) and (max-width: 474px) {
+@media (max-width: 475px) {
     .controls {
         width: 100vw;
+        padding-top: 86px;
+
         .controls-wrapper {
-            width: 410px;
-            margin: 0 auto 40px;
-            display: grid;
-            grid-template-areas:
-                'input input'
-                'select button';
+            width: 100%;
+            margin: 0 0 40px;
+            display: flex;
+            flex-direction: column;
+            padding: 0 15px;
 
             .button-all-categories {
                 grid-area: button;
@@ -247,28 +210,30 @@
             }
             .input-wrapper {
                 grid-area: input;
-                width: 400px;
+                width: 100%;
+                padding: 0;
                 input {
                     background: none;
+                    padding-left: 40px;
+                }
+                svg {
+                    left: 10px;
                 }
             }
+
             .input-wrapper:focus {
                 border: 1px solid var(--main-blue);
             }
             .select-wrapper {
+                justify-content: flex-start;
                 border: none;
-                width: 70%;
-                grid-area: select;
+                width: 55%;
+                padding: 8px 0;
                 p {
-                    width: 125px;
+                    width: 145px;
                 }
-            }
-            .modal {
-                background: none;
-                .modal-content {
-                    width: 320px;
-                    top: 170px;
-                    left: 92px;
+                select {
+                    width: 120px;
                 }
             }
         }

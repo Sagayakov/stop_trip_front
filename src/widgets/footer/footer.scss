@@ -143,7 +143,7 @@ footer {
     }
 }
 
-@media (min-width: 425px) and (max-width: 767px) {
+@media (max-width: 767px) {
     footer {
         width: 100%;
         margin: 0 auto 20px;
@@ -216,7 +216,7 @@ footer {
     }
 }
 
-@media (min-width: 425px) and (max-width: 475px) {
+@media (max-width: 475px) {
     footer {
         width: 100%;
         margin: 0 auto 20px;
@@ -234,6 +234,37 @@ footer {
                         input[type='submit'] {
                             width: 120px;
                             margin-left: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 424px) {
+    footer {
+        .footer-wrapper {
+            width: 90%;
+            .footer-top {
+                .feedback {
+                    .feed {
+                        align-items: center;
+                        p {
+                            font-size: 14px;
+                        }
+                    }
+                    form {
+                        input[type='text'] {
+                            width: 60%;
+                            margin: 0;
+                            font-size: 14px;
+                        }
+                        input[type='submit'] {
+                            width: 35%;
+
+                            padding: 12px 4px;
+                            font-size: 14px;
                         }
                     }
                 }

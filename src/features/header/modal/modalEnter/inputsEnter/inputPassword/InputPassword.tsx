@@ -2,6 +2,7 @@ import { FormState, UseFormRegister } from 'react-hook-form'
 import { Eye } from '../../../../../../shared/ui/icons/icons-tools/Eye'
 import { AuthData } from '../../lib/EnterType'
 import '../../lib/inputEmail.scss'
+import { useRef } from 'react'
 
 interface Props {
     formState: FormState<AuthData>
@@ -12,7 +13,11 @@ interface Props {
 
 export const InputPassword = ({ formState, register, setTogglePass, togglePass }: Props) => {
     const { errors } = formState
-    const handleToggle = () => setTogglePass(!togglePass)
+    const inputRef = useRef<HTMLInputElement | null>(null)
+    const handleToggle = () => {
+        setTogglePass(!togglePass)
+        inputRef?.current?.focus()
+    }
 
     return (
         <div className="password-div">
@@ -23,10 +28,12 @@ export const InputPassword = ({ formState, register, setTogglePass, togglePass }
                     pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^\w\s]).{6,}/,
                 })}
                 placeholder="Пароль"
-                type={togglePass ? 'password' : 'text'}
+                type={togglePass ? 'text' : 'password'}
                 style={{
                     border: `1px solid ${errors?.password ? '#FF3F25' : '#DCDCDC'}`,
                 }}
+                ref={inputRef}
+                onBlur={() => setTogglePass(false)}
             />
             <div id="eye" onClick={handleToggle}>
                 <Eye />
