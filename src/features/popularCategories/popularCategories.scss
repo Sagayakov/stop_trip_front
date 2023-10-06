@@ -122,8 +122,9 @@
     width: 100%;
     margin: 0px auto 40px;
     .popular-categories-wrapper {
-      width: 93.5%;
-      margin: 0 auto 40px;
+      width: 100%;
+      // margin: 0 auto 40px;
+      padding-left: 3.25%;
       font-family: var(--font-inter);
       .categories-titles {
         display: flex;
