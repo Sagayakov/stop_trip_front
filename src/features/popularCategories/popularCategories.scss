@@ -242,6 +242,14 @@
                 }
                 .button-all-categories {
                     font-size: 14px;
+                    text-align: end;
+                }
+            }
+            .categories-list {
+                .category {
+                    p {
+                        width: unset;
+                    }
                 }
             }
         }
