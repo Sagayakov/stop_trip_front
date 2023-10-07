@@ -121,12 +121,17 @@
             .categories-list {
                 justify-content: space-between;
                 .category {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
                     min-width: unset;
                     max-width: 19%;
                     height: 90px;
                     p {
                         width: 80%;
                         height: 30px;
+                        text-align: center;
                     }
                 }
             }
