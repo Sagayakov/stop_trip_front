@@ -8,7 +8,7 @@ interface Route {
     component: ComponentType;
 }
 
-const categoryRoutes = categories.map((el) => ({
+const categoryRoutes = Object.keys(categories).map((el) => ({
     path: `/${el}`,
     component: CategoryPage,
 }));
