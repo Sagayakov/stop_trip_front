@@ -119,6 +119,7 @@
     .popular-categories {
         .popular-categories-wrapper {
             .categories-list {
+                justify-content: space-between;
                 .category {
                     min-width: unset;
                     max-width: 19%;
@@ -127,18 +128,6 @@
                         width: 80%;
                         height: 30px;
                     }
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 921px) {
-    .popular-categories {
-        .popular-categories-wrapper {
-            .categories-list {
-                .category {
-                    max-width: 33%;
                 }
             }
         }
@@ -184,7 +173,7 @@
                     width: 0px;
                 }
                 width: 100%;
-                height: 106px;
+                height: 107px;
                 gap: 8px;
                 & div {
                     padding: 8px 12px;
