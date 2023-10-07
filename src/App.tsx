@@ -1,18 +1,12 @@
-import { Controls } from './features/controls'
-import { PopularAdverts } from './features/popularAdverts/PopularAdverts'
-import { PopularCategories } from './features/popularCategories'
-import { Footer, Header } from './widgets'
+import { StrictMode } from 'react';
+import { AppRouter } from './app/router/AppRouter';
 
 function App() {
     return (
-        <>
-            <Header />
-            <Controls />
-            <PopularCategories />
-            <PopularAdverts />
-            <Footer />
-        </>
-    )
+        <StrictMode>
+            <AppRouter />
+        </StrictMode>
+    );
 }
 
-export default App
+export default App;
