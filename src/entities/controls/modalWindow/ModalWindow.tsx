@@ -24,10 +24,11 @@ export const ModalWindow = ({ showModal, setShowModal }: Props) => {
                 {Object.entries(categories).map((el) => {
                     return (
                         <div
+                            key={el[0]}
                             className="modal-category"
                             onClick={() => navigate(`/${el[0]}`)}
                         >
-                            <span>{el[1]}</span>
+                            <span>{el[1].description}</span>
                             <ArrowRight color="#1C1C1E" />
                         </div>
                     );

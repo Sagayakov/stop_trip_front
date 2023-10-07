@@ -1,21 +1,14 @@
 import { useEffect, useState } from 'react';
-import { BuySell } from '../../shared/ui/icons/category/BuySell';
-import { Currency } from '../../shared/ui/icons/category/Currency';
-import { Docs } from '../../shared/ui/icons/category/Docs';
-import { Excursion } from '../../shared/ui/icons/category/Excursion';
-import { Food } from '../../shared/ui/icons/category/Food';
-import { Job } from '../../shared/ui/icons/category/Job';
-import { Realty } from '../../shared/ui/icons/category/Realty';
-import { Service } from '../../shared/ui/icons/category/Service';
-import { Taxi } from '../../shared/ui/icons/category/Taxi';
-import { Transport } from '../../shared/ui/icons/category/Transport';
 import { ArrowRight } from '../../shared/ui/icons/icons-tools/ArrowRight';
 import './popularCategories.scss';
 import { AllCategories, ModalWindow } from '../../entities/controls';
+import { categories } from '../../shared/ui/icons/const/categories';
+import { useNavigate } from 'react-router-dom';
 
 export const PopularCategories = () => {
     const [showModal, setShowModal] = useState(false);
     const [width, setWidth] = useState<number>(window.innerWidth);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const handleResize = () => {
@@ -47,76 +40,25 @@ export const PopularCategories = () => {
                 </div>
 
                 <div className="categories-list">
-                    <div className="category realty">
-                        <Realty />
-                        <p>Аренда недвижимости</p>
-                        <span>
-                            115 предложений <ArrowRight color="#1F6FDE" />
-                        </span>
-                    </div>
-                    <div className="category transport">
-                        <Transport />
-                        <p>Аренда транспорта</p>
-                        <span>
-                            115 предложений <ArrowRight color="#1F6FDE" />
-                        </span>
-                    </div>
-                    <div className="category food">
-                        <Food />
-                        <p>Домашняя еда</p>
-                        <span>
-                            115 предложений <ArrowRight color="#1F6FDE" />
-                        </span>
-                    </div>
-                    <div className="category docs">
-                        <Docs color="#1F6FDE" />
-                        <p>Документы</p>
-                        <span>
-                            115 предложений <ArrowRight color="#1F6FDE" />
-                        </span>
-                    </div>
-                    <div className="category currency">
-                        <Currency />
-                        <p>Валютные пары</p>
-                        <span>
-                            115 предложений <ArrowRight color="#1F6FDE" />
-                        </span>
-                    </div>
-                    <div className="category excursion">
-                        <Excursion />
-                        <p>Экскурсии</p>
-                        <span>
-                            115 предложений <ArrowRight color="#1F6FDE" />
-                        </span>
-                    </div>
-                    <div className="category job">
-                        <Job />
-                        <p>Работа</p>
-                        <span>
-                            115 предложений <ArrowRight color="#1F6FDE" />
-                        </span>
-                    </div>
-                    <div className="category taxi">
-                        <Taxi />
-                        <p>Такси</p>
-                        <span>
-                            115 предложений <ArrowRight color="#1F6FDE" />
-                        </span>
-                    </div>
-                    <div className="category buysell">
-                        <BuySell />
-                        <p>Покупка продажа</p>
-                        <span>
-                            115 предложений <ArrowRight color="#1F6FDE" />
-                        </span>
-                    </div>
-                    <div className="category service">
-                        <Service />
-                        <p>Услуги</p>
-                        <span>
-                            115 предложений <ArrowRight color="#1F6FDE" />
-                        </span>
-                    </div>
+                    {Object.entries(categories)
+                        .filter((el) => el[0] !== 'events')
+                        .map((el) => {
+                            const { icon: Icon } = el[1];
+                            return (
+                                <div
+                                    key={el[0]}
+                                    className={`category ${el[0]}>`}
+                                    onClick={() => navigate(`/${el[0]}`)}
+                                >
+                                    <Icon />
+                                    <p>{el[1].description}</p>
+                                    <span>
+                                        115 предложений{' '}
+                                        <ArrowRight color="#1F6FDE" />
+                                    </span>
+                                </div>
+                            );
+                        })}
                 </div>
             </div>
         </div>

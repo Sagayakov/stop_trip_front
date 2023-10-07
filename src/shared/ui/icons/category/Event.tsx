@@ -1,4 +1,4 @@
-export const Docs = () => {
+export const Event = () => {
     return (
         <svg
             width="40"
