@@ -1,18 +1,19 @@
-import { Controls } from './features/controls'
-import { PopularAdverts } from './features/popularAdverts/PopularAdverts'
-import { PopularCategories } from './features/popularCategories'
-import { Footer, Header } from './widgets'
+import { StrictMode } from 'react';
+import { AppRouter } from './app/router/AppRouter';
+import { Provider } from 'react-redux';
+import { store } from './app/store/store';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
     return (
-        <>
-            <Header />
-            <Controls />
-            <PopularCategories />
-            <PopularAdverts />
-            <Footer />
-        </>
-    )
+        <StrictMode>
+            <Provider store={store}>
+                <BrowserRouter>
+                    <AppRouter />
+                </BrowserRouter>
+            </Provider>
+        </StrictMode>
+    );
 }
 
-export default App
+export default App;
