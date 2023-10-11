@@ -188,13 +188,14 @@
     .controls {
         width: 100vw;
         padding-top: 76px;
-        margin: 0 0 20px;
+        margin: 0 0 10px;
         .controls-wrapper {
             width: 100%;
             margin: 0 0 20px;
             display: flex;
             flex-direction: column;
             padding: 0 15px;
+            margin-bottom: 10px;
 
             .button-all-categories {
                 grid-area: button;

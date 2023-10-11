@@ -252,7 +252,9 @@
 
 @media (max-width: 474px) {
     .popular-categories {
+        margin-bottom: 10px;
         .popular-categories-wrapper {
+            margin-bottom: 10px;
             .categories-titles {
                 gap: 10px;
                 h3 {
@@ -265,8 +267,9 @@
             }
             .categories-list {
                 .category {
+                    max-width: unset;
                     p {
-                        width: unset;
+                        width: auto;
                     }
                 }
             }
