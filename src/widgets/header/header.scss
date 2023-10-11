@@ -125,25 +125,26 @@ header {
 }
 
 @media (min-width: 768px) and (max-width: 1439px) {
-    header.fixed-header{
+    header.fixed-header {
         // transition: all 0.6s ease 0.5s;
-        .header-wrapper{
+        .header-wrapper {
             padding: 5px 0px;
             #logo {
                 height: 30px;
             }
-            .addAdvert{
+            .addAdvert {
                 height: 35px;
             }
-            .language-auth{
-                .language{
-                    .language-ru, .language-eng{
+            .language-auth {
+                .language {
+                    .language-ru,
+                    .language-eng {
                         height: 25px;
                         line-height: 8px;
                     }
                 }
             }
-            .auth-button{
+            .auth-button {
                 height: 35px;
             }
         }
@@ -172,6 +173,7 @@ header {
 @media (min-width: 601px) and (max-width: 767px) {
     header {
         .header-wrapper {
+            height: 70px;
             width: 90%;
             justify-content: space-between;
             .addAdvert {
@@ -188,6 +190,7 @@ header {
 @media (min-width: 476px) and (max-width: 600px) {
     header {
         .header-wrapper {
+            height: 60px;
             width: 90%;
             justify-content: space-between;
             .addAdvert {
