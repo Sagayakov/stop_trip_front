@@ -54,7 +54,7 @@ export const Header = () => {
             window.removeEventListener('resize', handleResize);
             window.removeEventListener('scroll', handleScroll);
         };
-    }, [window.innerWidth]);
+    }, []);
 
     return (
         <header /* className={fixedHeader ? 'fixed-header' : ''} */ ref={ref}>
