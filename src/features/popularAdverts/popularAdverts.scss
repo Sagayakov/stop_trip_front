@@ -152,12 +152,76 @@
     }
 }
 
-@media (max-width: 425px) {
+@media (min-width: 375px) and (max-width: 425px) {
     .popular-adverts {
         .popular-adverts-wrapper {
             h3 {
                 font-size: 1.1rem;
                 text-align: center;
+            }
+            .adverts-list {
+                grid-template-columns: 1fr 1fr;
+                gap: 0.75rem;
+                .adverts-cart {
+                    width: 150px;
+                    height: 250px;
+                    img {
+                        width: 150px;
+                        height: 130px;
+                        border-radius: 12px 12px 0 0;
+                    }
+                    .description {
+                        padding: 0.75rem;
+                        .price {
+                            margin-bottom: 6px;
+                            font-size: 14px;
+                        }
+                        p {
+                            font-size: 14px;
+                            margin-bottom: 6px;
+                        }
+                        span {
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 374px) {
+    .popular-adverts {
+        .popular-adverts-wrapper {
+            h3 {
+                font-size: 1.1rem;
+                text-align: center;
+            }
+            .adverts-list {
+                grid-template-columns: 1fr 1fr;
+                gap: 0.75rem;
+                .adverts-cart {
+                    width: 130px;
+                    height: 250px;
+                    img {
+                        width: 130px;
+                        height: 130px;
+                        border-radius: 8px 8px 0 0;
+                    }
+                    .description {
+                        padding: 0.5rem;
+                        .price {
+                            margin-bottom: 6px;
+                            font-size: 14px;
+                        }
+                        p {
+                            font-size: 14px;
+                            margin-bottom: 6px;
+                        }
+                        span {
+                            font-size: 12px;
+                        }
+                    }
+                }
             }
         }
     }
