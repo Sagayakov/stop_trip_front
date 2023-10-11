@@ -13,9 +13,7 @@ export const Header = () => {
     const dispatch = useAppDispatch();
     const toggle = useAppSelector((state) => state.toggleModalEnter.toggle);
     const [width, setWidth] = useState<number>(window.innerWidth);
-    //const [fixedHeader, setFixedHeader] = useState(false);
     const ref = useRef(null);
-    // const [smallHeaderHeight, setSmallHeaderHeight] = useState(false)
 
     const [showUserMenu, setShowUserMenu] = useState(false); //потом переделать на редьюсер
 
@@ -28,22 +26,16 @@ export const Header = () => {
         window.addEventListener('resize', handleResize);
 
         const handleScroll = () => {
-            //setFixedHeader(true);
-            //if (window.scrollY === 0) setFixedHeader(false);
             if (ref.current) {
                 if (
                     document.body.scrollTop > 1 ||
                     document.documentElement.scrollTop > 1
                 ) {
                     (ref.current as HTMLElement).classList.add('fixed-header');
-                    //(ref.current as HTMLElement).style.position = 'fixed';
-                    //(ref.current as HTMLElement).style.marginBottom = '40px';
                 } else {
                     (ref.current as HTMLElement).classList.remove(
                         'fixed-header'
                     );
-                    //(ref.current as HTMLElement).style.marginBottom = '80px';
-                    //setFixedHeader(false);
                 }
             }
         };
@@ -57,7 +49,7 @@ export const Header = () => {
     }, [window.innerWidth]);
 
     return (
-        <header /* className={fixedHeader ? 'fixed-header' : ''} */ ref={ref}>
+        <header ref={ref}>
             <div className="header-wrapper">
                 <NavLink to="/">
                     <LogoHeader />

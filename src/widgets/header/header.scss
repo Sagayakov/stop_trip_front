@@ -93,6 +93,14 @@ header {
     }
 }
 
+@media (min-width: 1440px) {
+    header.fixed-header {
+        .header-wrapper {
+            padding: 12px 0px;
+        }
+    }
+}
+
 @media (max-width: 1439px) {
     header {
         width: 100%;
