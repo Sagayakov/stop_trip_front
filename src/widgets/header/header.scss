@@ -124,11 +124,38 @@ header {
     }
 }
 
+@media (min-width: 768px) and (max-width: 1439px) {
+    header.fixed-header{
+        // transition: all 0.6s ease 0.5s;
+        .header-wrapper{
+            padding: 5px 0px;
+            #logo {
+                height: 30px;
+            }
+            .addAdvert{
+                height: 35px;
+            }
+            .language-auth{
+                .language{
+                    .language-ru, .language-eng{
+                        height: 25px;
+                        line-height: 8px;
+                    }
+                }
+            }
+            .auth-button{
+                height: 35px;
+            }
+        }
+    }
+}
+
 @media (min-width: 768px) and (max-width: 1023px) {
     header {
         .header-wrapper {
             width: 85%;
             justify-content: space-between;
+            padding: 10px 0px;
             .addAdvert {
                 width: 30%;
             }

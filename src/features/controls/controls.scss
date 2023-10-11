@@ -112,6 +112,7 @@
     .controls {
         width: 100%;
         margin: 0 0 40px;
+        padding-top: 106px;
         .controls-wrapper {
             .button-all-categories {
                 width: 10rem;
@@ -186,11 +187,11 @@
 @media (max-width: 475px) {
     .controls {
         width: 100vw;
-        padding-top: 86px;
-
+        padding-top: 76px;
+        margin: 0 0 20px;
         .controls-wrapper {
             width: 100%;
-            margin: 0 0 40px;
+            margin: 0 0 20px;
             display: flex;
             flex-direction: column;
             padding: 0 15px;

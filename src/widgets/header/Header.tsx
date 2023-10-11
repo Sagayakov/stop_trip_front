@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import { useAppDispatch, useAppSelector } from '../../app/store/hooks';
 import { Modal } from '../../features/header/modal';
 import { ModalMobile } from '../../features/header/modal/modalMobile/ModalMobile';
@@ -7,13 +8,13 @@ import { LogoHeader } from '../../shared/ui/icons/icons-tools/LogoHeader';
 import { Person } from '../../shared/ui/icons/icons-tools/Person';
 import { Plus } from '../../shared/ui/icons/icons-tools/Plus';
 import './header.scss';
-import { NavLink } from 'react-router-dom';
 
 export const Header = () => {
     const dispatch = useAppDispatch();
     const toggle = useAppSelector((state) => state.toggleModalEnter.toggle);
     const [width, setWidth] = useState<number>(window.innerWidth);
     const [fixedHeader, setFixedHeader] = useState(false);
+    // const [smallHeaderHeight, setSmallHeaderHeight] = useState(false)
 
     const [showUserMenu, setShowUserMenu] = useState(false); //потом переделать на редьюсер
 
@@ -25,7 +26,10 @@ export const Header = () => {
         };
         window.addEventListener('resize', handleResize);
 
-        const handleScroll = () => setFixedHeader(true);
+        const handleScroll = () => {
+            setFixedHeader(true);
+            if(window.scrollY === 0) setFixedHeader(false)
+        };
         window.addEventListener('scroll', handleScroll);
 
         return () => {
