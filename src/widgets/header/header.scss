@@ -3,11 +3,9 @@ header.fixed-header {
     top: 0;
     left: 0;
     right: 0;
-    width: 100%;
-    margin: 0px auto 40px;
-    box-shadow: 0px 6px 8px 0px #00000014;
-    background-color: var(--main-background);
+    margin-bottom: 40px;
 }
+
 header {
     width: 100%;
     margin: 0px auto 80px;
@@ -15,7 +13,7 @@ header {
     position: absolute;
     z-index: 100;
     background-color: var(--main-background);
-    // transition: all 0.3s ease;
+    transition: all 0.7s ease;
 
     .header-wrapper {
         width: 1240px;
@@ -25,6 +23,7 @@ header {
         align-items: center;
         justify-content: center;
         cursor: pointer;
+        transition: all 0.7s ease;
         .addAdvert {
             width: 262px;
             height: 3rem;
@@ -171,6 +170,15 @@ header {
 }
 
 @media (min-width: 601px) and (max-width: 767px) {
+    header.fixed-header {
+        .header-wrapper {
+            height: 40px;
+            .addAdvert {
+                height: 40px;
+                transition: all 0.6s ease;
+            }
+        }
+    }
     header {
         .header-wrapper {
             height: 70px;
@@ -178,6 +186,7 @@ header {
             justify-content: space-between;
             .addAdvert {
                 width: 40%;
+                transition: all 0.6s ease;
             }
             .addAdvert + svg {
                 width: 40px;
@@ -188,28 +197,68 @@ header {
     }
 }
 @media (min-width: 476px) and (max-width: 600px) {
+    header.fixed-header {
+        .header-wrapper {
+            height: 40px;
+            #logo {
+                height: 30px;
+                transition: all 0.6s ease;
+            }
+            .addAdvert {
+                height: 30px;
+                transition: all 0.6s ease;
+            }
+            .addAdvert + svg {
+                height: 30px;
+                transition: all 0.6s ease;
+            }
+        }
+    }
     header {
         .header-wrapper {
             height: 60px;
             width: 90%;
             justify-content: space-between;
-            .addAdvert {
-                width: 40%;
+            #logo {
+                transition: all 0.6s ease;
             }
             .addAdvert {
                 width: auto;
                 text-align: center;
+                transition: all 0.6s ease;
             }
             .addAdvert + svg {
                 width: 35px;
                 height: 35px;
                 cursor: pointer;
+                transition: all 0.6s ease;
             }
         }
     }
 }
 
 @media (min-width: 425px) and (max-width: 475px) {
+    header.fixed-header {
+        height: 40px;
+        margin: 0 auto;
+        .header-wrapper {
+            height: 30px;
+            margin: 0 auto;
+            padding: 20px 0;
+            #logo {
+                height: 30px;
+                transition: all 0.6s ease;
+            }
+            .addAdvert {
+                height: 30px;
+                transition: all 0.6s ease;
+            }
+            .addAdvert + svg {
+                height: 30px;
+                transition: all 0.6s ease;
+            }
+        }
+    }
     header {
         height: 50px;
         .header-wrapper {
@@ -240,12 +289,25 @@ header {
 
 @media (max-width: 424px) {
     header.fixed-header {
-        width: 100%;
-        margin: 0;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 48px;
+        height: 40px;
+        margin: 0 auto;
+        .header-wrapper {
+            height: 30px;
+            margin: 0 auto;
+            padding: 20px 0;
+            #logo {
+                height: 30px;
+                transition: all 0.6s ease;
+            }
+            .addAdvert {
+                height: 30px;
+                transition: all 0.6s ease;
+            }
+            .addAdvert + svg {
+                height: 30px;
+                transition: all 0.6s ease;
+            }
+        }
     }
     header {
         .header-wrapper {
@@ -254,6 +316,7 @@ header {
             justify-content: space-between;
             #logo {
                 width: 100px;
+                transition: all 0.6s ease;
             }
             .addAdvert {
                 width: auto;
@@ -261,9 +324,11 @@ header {
                 padding: 8px;
                 font-size: 14px;
                 margin: 0;
+                transition: all 0.6s ease;
             }
             .addAdvert + svg {
                 cursor: pointer;
+                transition: all 0.6s ease;
             }
             .language-auth {
                 display: none;
