@@ -74,8 +74,11 @@
                 border: none;
                 -webkit-appearance: none;
                 background-color: white; // для firefox
+                background: url('../../shared/ui/icons/down.svg') right 30%
+                    no-repeat;
+                background-size: 20%;
             }
-            #arrow-down{
+            #arrow-down {
                 position: absolute;
                 top: 13px;
                 right: 5px;
@@ -111,6 +114,7 @@
                 padding: 0.5rem;
                 select {
                     width: 80%;
+                    background-size: 15%;
                 }
             }
         }
@@ -132,6 +136,9 @@
             }
             .select-wrapper {
                 width: 22%;
+                select {
+                    background-size: 20%;
+                }
                 svg {
                     margin: 0;
                 }
@@ -182,7 +189,7 @@
             }
             .select-wrapper {
                 border: none;
-                width: 85%;
+                width: 90%;
                 padding-left: 0;
                 p {
                     width: 125px;
@@ -237,27 +244,28 @@
             .select-wrapper {
                 justify-content: flex-start;
                 border: none;
-                width: 55%;
+                width: 45%;
                 padding: 8px 0;
                 p {
-                    width: 145px;
+                    width: 50%;
                 }
                 select {
-                    width: 120px;
+                    width: 50%;
+                    //background-position: right center;
                 }
             }
         }
     }
 }
 
-@media (max-width: 375px) {
-    .controls{
-        .controls-wrapper{
-            .select-wrapper{
-                width: 59%;
-                #arrow-down{
-                right: -15px;
-            }
+@media (max-width: 400px) {
+    .controls {
+        .controls-wrapper {
+            .select-wrapper {
+                width: 60%;
+                select {
+                    width: 45%;
+                }
             }
         }
     }
