@@ -8,6 +8,7 @@ import { LogoHeader } from '../../shared/ui/icons/icons-tools/LogoHeader';
 import { Person } from '../../shared/ui/icons/icons-tools/Person';
 import { Plus } from '../../shared/ui/icons/icons-tools/Plus';
 import './header.scss';
+import React from 'react';
 
 export const Header = () => {
     const dispatch = useAppDispatch();
@@ -46,7 +47,7 @@ export const Header = () => {
             window.removeEventListener('resize', handleResize);
             window.removeEventListener('scroll', handleScroll);
         };
-    }, [window.innerWidth]);
+    }, []);
 
     return (
         <header ref={ref}>

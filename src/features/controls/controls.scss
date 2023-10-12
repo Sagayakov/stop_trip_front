@@ -66,11 +66,19 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
             select {
                 width: 60%;
                 font-weight: 500;
                 color: var(--main-blue);
                 border: none;
+                -webkit-appearance: none;
+                background-color: white; // для firefox
+            }
+            #arrow-down{
+                position: absolute;
+                top: 13px;
+                right: 5px;
             }
             svg {
                 margin-right: 8px;
@@ -237,6 +245,19 @@
                 select {
                     width: 120px;
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .controls{
+        .controls-wrapper{
+            .select-wrapper{
+                width: 59%;
+                #arrow-down{
+                right: -15px;
+            }
             }
         }
     }
