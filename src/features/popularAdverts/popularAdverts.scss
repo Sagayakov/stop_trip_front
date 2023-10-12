@@ -1,6 +1,6 @@
 .popular-adverts {
     width: 1440px;
-    margin: 0px auto 80px;
+    margin: 0px auto 50px;
     .popular-adverts-wrapper {
         width: 1240px;
         margin: 0 auto 40px;
@@ -42,7 +42,7 @@
                         justify-content: space-between;
                         margin-bottom: 14px;
                         color: var(--main-blue);
-                        letter-spacing: 3px;
+                        letter-spacing: 1px;
                     }
                     p {
                         margin-bottom: 0.75rem;
@@ -129,7 +129,7 @@
                             justify-content: space-between;
                             margin-bottom: 12px;
                             color: var(--main-blue);
-                            letter-spacing: 3px;
+                            letter-spacing: 1px;
                         }
                         p {
                             margin-bottom: 12px;

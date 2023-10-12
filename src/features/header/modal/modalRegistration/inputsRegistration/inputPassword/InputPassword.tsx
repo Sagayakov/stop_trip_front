@@ -15,7 +15,7 @@ export const InputPassword = ({ formState, register, showPassword, setShowPasswo
     const inputRef = useRef<HTMLInputElement | null>(null)
     const handleShowPass = () => {
         setShowPassword(!showPassword)
-        inputRef.current?.focus()
+        // inputRef.current?.focus()
     }
 
     return (
