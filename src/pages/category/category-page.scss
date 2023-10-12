@@ -1,0 +1,50 @@
+main {
+    max-width: 1440px;
+    margin: auto;
+
+    .bread-crumbs {
+        max-width: 1240px;
+        margin: auto;
+        a {
+            text-decoration: none;
+        }
+    }
+
+    h1 {
+        max-width: 1240px;
+        margin: auto;
+    }
+
+    .filters-adverts {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1240px;
+        width: 100%;
+        margin: auto;
+        gap: 16px;
+
+        .filters {
+            width: 23.8%;
+            height: 500px; // убрать при наполнении
+            border-radius: 16px;
+            background-color: var(--grey-4);
+        }
+
+        .adverts {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            width: 75%;
+
+            .card {
+                border-radius: 16px;
+                background-color: var(--main-background);
+                img {
+                    float: left;
+                    border-radius: 16px 0 0 16px;
+                    margin-right: 16px;
+                }
+            }
+        }
+    }
+}
