@@ -1,10 +1,12 @@
 interface Props {
     color?: string;
+    onclick?: () => void
 }
 
-export const ArrowDown = ({ color }: Props) => {
+export const ArrowDown = ({ color, onclick }: Props) => {
     return (
         <svg
+            onClick={onclick}
             id="arrow-down"
             width="24"
             height="24"

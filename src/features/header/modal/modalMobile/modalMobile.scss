@@ -31,6 +31,9 @@
           color: var(--main-black);
           margin: 4px 0px 4px 24px;
         }
+        .language-auth{
+          display: block;
+        }
       }
       .user-option:active {
         color: var(--grey-2);
@@ -49,6 +52,11 @@
     .modal-mobile-content {
       top: 45px;
       left: calc(35% - 25px);
+      .menu{
+        .language-auth{
+          display: inline-block;
+        }
+      }
     }
   }
 }
@@ -59,6 +67,11 @@
       top: 50px;
       left: calc(30% - 20px);
       width: 70%;
+      .menu{
+        .language-auth{
+          display: inline-block;
+        }
+      }
     }
   }
 }

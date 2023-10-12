@@ -22,7 +22,7 @@ export const InputRepeatPassword = ({
     const inputRef = useRef<HTMLInputElement | null>(null);
     const handleShowPass = () => {
         setShowPassword(!showPassword);
-        inputRef.current?.focus();
+        // inputRef.current?.focus();
     };
     const password = watch('password');
     const repeatPassword = watch('repeatPassword');
