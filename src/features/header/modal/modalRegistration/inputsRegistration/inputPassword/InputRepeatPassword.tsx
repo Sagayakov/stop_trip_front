@@ -1,7 +1,6 @@
-import { FormState, UseFormRegister, UseFormWatch } from 'react-hook-form';
+import { FormState,  UseFormRegister, UseFormWatch } from 'react-hook-form';
 import { Eye } from '../../../../../../shared/ui/icons/icons-tools/Eye';
 import { AuthRegistration } from '../../lib/RegistrationTypes';
-import { useRef } from 'react';
 
 interface Props {
     formState: FormState<AuthRegistration>;
@@ -19,12 +18,11 @@ export const InputRepeatPassword = ({
     setShowPassword,
 }: Props) => {
     const { errors } = formState;
-    const inputRef = useRef<HTMLInputElement | null>(null);
     const handleShowPass = () => {
         setShowPassword(!showPassword);
-        // inputRef.current?.focus();
     };
-    const password = watch('password');
+
+    const password = watch('passWord');
     const repeatPassword = watch('repeatPassword');
 
     return (
@@ -45,17 +43,15 @@ export const InputRepeatPassword = ({
                                 : '#DCDCDC'
                         }`,
                     }}
-                    ref={inputRef}
                     onBlur={() => setShowPassword(false)}
                 />
                 <div id="eye" onClick={handleShowPass}>
                     <Eye />
                 </div>
                 <div className="input-error">
-                    {(errors?.repeatPassword ||
-                        password !== repeatPassword) && (
+                    {(errors?.repeatPassword  || (password !== repeatPassword)) && (
                         <p style={{ color: '#FF3F25', fontSize: '13px' }}>
-                            Пароли должны совпадать
+                            Пароли не совпадают
                         </p>
                     )}
                 </div>
