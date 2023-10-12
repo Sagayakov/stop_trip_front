@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { MapIcon } from '../../../shared/ui/icons/icons-tools/MapIcon';
+import { ArrowDown } from '../../../shared/ui/icons/icons-tools/ArrowDown';
+
 
 export const SelectGeo = () => {
     const [width, setWidth] = useState<number>(window.innerWidth);
@@ -23,6 +25,7 @@ export const SelectGeo = () => {
                 <option value="Гоа">Гоа</option>
                 <option value="Гоа">Гоа</option>
             </select>
+            <ArrowDown color="#1f6fde" />
         </div>
     );
 };
