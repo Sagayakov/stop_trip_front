@@ -51,7 +51,7 @@ export const InputRepeatPassword = ({
                 <div id="eye" onClick={handleShowPass}>
                     <Eye />
                 </div>
-                <div style={{ height: '1.5rem' }}>
+                <div className="input-error">
                     {(errors?.repeatPassword ||
                         password !== repeatPassword) && (
                         <p style={{ color: '#FF3F25', fontSize: '13px' }}>
