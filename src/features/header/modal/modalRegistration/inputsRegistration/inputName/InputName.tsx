@@ -14,7 +14,8 @@ export const InputName = ({ register, formState }: Props) => {
             <input
                 {...register('userName', {
                     required: true,
-                    pattern: /^[a-zA-Zа-яА-Я]/,
+                    pattern: /^[a-zA-Zа-яА-Я]+$/,
+                    minLength: 2
                 })}
                 placeholder="Имя пользователя"
                 style={{
