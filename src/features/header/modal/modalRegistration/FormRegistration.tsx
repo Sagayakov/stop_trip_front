@@ -18,31 +18,31 @@ export const FormRegistration = () => {
       mode: "all",
     });
 
-  const onsubmit: SubmitHandler<AuthRegistration> = (data) => {
-    alert(JSON.stringify(data));
-    reset();
-  };
+    const onsubmit: SubmitHandler<AuthRegistration> = (data) => {
+        alert(JSON.stringify(data));
+        reset();
+    };
 
-  return (
-    <form onSubmit={handleSubmit(onsubmit)} autoComplete="false">
-      <InputName formState={formState} register={register} />
-      <InputPhone formState={formState} register={register} />
-      <InputEmail formState={formState} register={register} />
-      <InputPassword
-        formState={formState}
-        register={register}
-        showPassword={showPassword}
-        setShowPassword={setShowPassword}
-      />
-      <InputRepeatPassword
-        formState={formState}
-        register={register}
-        showPassword={showPassword}
-        setShowPassword={setShowPassword}
-        watch={watch}
-      />
-      <InputChechbox register={register} formState={formState} />
-      <InputSubmit formState={formState} />
-    </form>
-  );
+    return (
+        <form onSubmit={handleSubmit(onsubmit)} autoComplete="false">
+            <InputName formState={formState} register={register} />
+            <InputPhone formState={formState} register={register} />
+            <InputEmail formState={formState} register={register} />
+            <InputPassword
+                formState={formState}
+                register={register}
+                showPassword={showPassword}
+                setShowPassword={setShowPassword}
+            />
+            <InputRepeatPassword
+                formState={formState}
+                register={register}
+                showPassword={showPassword}
+                setShowPassword={setShowPassword}
+                watch={watch}
+            />
+            <InputChechbox register={register} formState={formState} />
+            <InputSubmit formState={formState} />
+        </form>
+    );
 };
