@@ -20,11 +20,11 @@ export const HalfStar = () => {
                     y2="7"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop stop-color="#FFD873" />
-                    <stop offset="0.489583" stop-color="#FFD873" />
-                    <stop offset="0.489683" stop-color="#FFD873" />
-                    <stop offset="0.489783" stop-color="#DCDCDC" />
-                    <stop offset="1" stop-color="#DCDCDC" />
+                    <stop stopColor="#FFD873" />
+                    <stop offset="0.489583" stopColor="#FFD873" />
+                    <stop offset="0.489683" stopColor="#FFD873" />
+                    <stop offset="0.489783" stopColor="#DCDCDC" />
+                    <stop offset="1" stopColor="#DCDCDC" />
                 </linearGradient>
             </defs>
         </svg>

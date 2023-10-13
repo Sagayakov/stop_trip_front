@@ -3,6 +3,7 @@ import { categories } from '../../shared/const/categories';
 import { NavLink } from 'react-router-dom';
 import './category-page.scss';
 import { AnyCategory, SettingAdvertsForm } from '../../widgets/index';
+import { Pagination } from '../../features/pagination';
 
 export const CategoryPage = () => {
     const category = location.pathname.slice(1);
@@ -20,6 +21,7 @@ export const CategoryPage = () => {
                 <SettingAdvertsForm />
                 <AnyCategory />
             </div>
+            <Pagination />
         </>
     );
 };
