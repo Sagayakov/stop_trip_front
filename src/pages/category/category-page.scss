@@ -276,6 +276,8 @@ main {
                     }
                     .time,
                     .author {
+                        display: flex;
+                        gap: 16px;
                         font-size: 14px;
                         font-weight: 400;
                         margin-bottom: 16px;

@@ -1,3 +1,4 @@
+import { Star } from '../../shared/ui/icons/icons-tools/Star';
 import data from '../../../db.json';
 import { Like } from '../../shared/ui/Like';
 
@@ -18,7 +19,18 @@ export const AnyCategory = () => {
                             </p>
                             <h3>{el.price}</h3>
                             <p className="card-description">{el.text}</p>
-                            <span className="author">{el.author}</span>
+                            <span className="author">
+                                {el.author}
+                                <p
+                                    aria-label={`Rating is ${el.rating} out of 5`}
+                                >
+                                    <Star />
+                                    <Star />
+                                    <Star />
+                                    <Star />
+                                    <Star />
+                                </p>
+                            </span>
                             <p className="time">{el.time}</p>
                         </div>
                     </div>
