@@ -1,6 +1,6 @@
-import { Star } from '../../shared/ui/icons/icons-tools/Star';
 import data from '../../../db.json';
 import { Like } from '../../shared/ui/Like';
+import { Rating } from '../../shared/ui/Rating';
 
 export const AnyCategory = () => {
     return (
@@ -21,15 +21,7 @@ export const AnyCategory = () => {
                             <p className="card-description">{el.text}</p>
                             <span className="author">
                                 {el.author}
-                                <p
-                                    aria-label={`Rating is ${el.rating} out of 5`}
-                                >
-                                    <Star />
-                                    <Star />
-                                    <Star />
-                                    <Star />
-                                    <Star />
-                                </p>
+                                <Rating rating={el.rating} />
                             </span>
                             <p className="time">{el.time}</p>
                         </div>
