@@ -10,23 +10,23 @@ export const Bathroom = ({ register }: Props) => {
         <div className="bathroom">
             <h3>Санузел</h3>
             <div className="bathroom-setting">
-                <label>
+                <label className="form-checkbox">
                     <input
                         type="checkbox"
                         id="bathroom-setting-1"
                         value="Разделный"
                         {...register('bathRoom')}
                     />
-                    Раздельный
+                    <span>Раздельный</span>
                 </label>
-                <label>
+                <label className="form-checkbox">
                     <input
                         type="checkbox"
                         id="bathroom-setting-1"
                         value="Совмещенный"
                         {...register('bathRoom')}
                     />
-                    Совмещенный
+                    <span>Совмещенный</span>
                 </label>
             </div>
         </div>

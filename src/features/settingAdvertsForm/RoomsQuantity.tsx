@@ -10,41 +10,41 @@ export const RoomsQuantity = ({ register }: Props) => {
         <div className="rooms-quantity">
             <h3>Количество комнат</h3>
             <div className="setting-rooms-quantity">
-                <label>
+                <label className="form-checkbox">
                     <input
                         type="checkbox"
                         id="setting-rooms-quantity-1"
                         value="1"
                         {...register('roomsQuantity')}
                     />
-                    1
+                    <span>1</span>
                 </label>
-                <label>
+                <label className="form-checkbox">
                     <input
                         type="checkbox"
                         id="setting-rooms-quantity-2"
                         value="2"
                         {...register('roomsQuantity')}
                     />
-                    2
+                    <span>2</span>
                 </label>
-                <label>
+                <label className="form-checkbox">
                     <input
                         type="checkbox"
                         id="setting-rooms-quantity-3"
                         value="3"
                         {...register('roomsQuantity')}
                     />
-                    3
+                    <span>3</span>
                 </label>
-                <label>
+                <label className="form-checkbox">
                     <input
                         type="checkbox"
                         id="setting-rooms-quantity-4"
                         value="4"
                         {...register('roomsQuantity')}
                     />
-                    4
+                    <span>4</span>
                 </label>
             </div>
         </div>

@@ -1,6 +1,12 @@
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { TypeSettingAdverts } from './TypeSettingAdverts';
-import { SettingPrice, Bathroom, LivingSpace, RoomsQuantity, TotalArea } from '../../features/settingAdvertsForm';
+import {
+    SettingPrice,
+    Bathroom,
+    LivingSpace,
+    RoomsQuantity,
+    TotalArea,
+} from '../../features/settingAdvertsForm';
 import { Reset } from '../../shared/ui/icons/icons-tools/Reset';
 
 export const SettingAdvertsForm = () => {
@@ -13,8 +19,8 @@ export const SettingAdvertsForm = () => {
     };
 
     const onReset = () => {
-        reset()
-    }
+        reset();
+    };
 
     return (
         <section className="filters">
@@ -24,18 +30,17 @@ export const SettingAdvertsForm = () => {
                 <LivingSpace register={register} />
                 <RoomsQuantity register={register} />
                 <Bathroom register={register} />
-                <label className="balcony">
+                <label className="form-checkbox balcony">
                     <input type="checkbox" {...register('balcony')} />
-                    Балкон
+                    <span>Балкон</span>
                 </label>
-                <label className="only-with-photo">
+                <label className="form-checkbox only-with-photo">
                     <input type="checkbox" {...register('onlyWithPhotos')} />
-                    Только с фотографиями
+                    <span>Только с фотографиями</span>
                 </label>
                 <input type="submit" value="Показать 100 объявлений" />
                 <button className="reset-setting-form" onClick={onReset}>
-                    <Reset
-                        color="#1F6FDE"/>
+                    <Reset color="#1F6FDE" />
                     Сбросить фильтры
                 </button>
             </form>
