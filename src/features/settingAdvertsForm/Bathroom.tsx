@@ -22,7 +22,7 @@ export const Bathroom = ({ register }: Props) => {
                 <label className="form-checkbox">
                     <input
                         type="checkbox"
-                        id="bathroom-setting-1"
+                        id="bathroom-setting-2"
                         value="Совмещенный"
                         {...register('bathRoom')}
                     />

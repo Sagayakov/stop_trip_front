@@ -226,6 +226,8 @@ main {
                     top: 16px;
                     left: calc(100% - 32px);
                     height: 20px;
+                    z-index: 2;
+                    cursor: pointer;
                 }
                 .image {
                     img {

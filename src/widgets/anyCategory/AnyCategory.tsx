@@ -1,14 +1,13 @@
-import { Favorite } from "../../shared/ui/icons/icons-tools/Favorite";
-import data from '../../../db.json'
+import data from '../../../db.json';
+import { Like } from '../../shared/ui/Like';
+
 export const AnyCategory = () => {
     return (
         <section className="adverts">
             {data.map((el) => {
                 return (
                     <div className="card" key={el.id}>
-                        <div className="add-to-favorite">
-                            <Favorite color="" strokeColor="" />
-                        </div>
+                        <Like />
                         <div className="image">
                             <img src={el.image} />
                         </div>
@@ -27,4 +26,4 @@ export const AnyCategory = () => {
             })}
         </section>
     );
-}
+};
